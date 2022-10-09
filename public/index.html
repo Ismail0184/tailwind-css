@@ -7,18 +7,238 @@
     <title>Food Lover</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div>
-    <div>
-        <nav>
-            <div>
-                <h1>
+<body class="bg-gray-50 text-gray-600 font-body">
+
+<div class="grid md:grid-cols-3"><!-- wrapper -->
+    <div class="md:col-span-1 md:flex md:justify-end"><!-- menu area -->
+        <nav class="text-right">
+            <div class="flex justify-between items-center">
+                <h1 class="text-gray-900 font-semibold text-2xl uppercase p-4 md:border-b md:border-red-100 hover:text-primary">
                     <a href="/">Food Lover</a>
                 </h1>
+
+                <div id="navicon" class="px-4 cursor-pointer md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </div>
             </div>
+
+            <ul id="sitenav" class="mt-4 hidden md:block">
+                <li class="py-1">
+                    <a href="#" class="flex justify-end px-4 text-gray-900 font-semibold border-r-4 border-primary">
+                        <span>Home</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </a>
+                </li>
+                <li class="py-1">
+                    <a href="#" class="flex justify-end px-4 border-r-4 border-white">
+                        <span>About</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path></svg>
+                    </a>
+                </li>
+                <li class="py-1">
+                    <a href="#" class="flex justify-end px-4 border-r-4 border-white">
+                        <span>Contact</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </div>
-</div>
-    
+
+    <main class="bg-blue-50 py-8 px-16 md:col-span-2">
+        <div class="flex justify-center md:justify-end">
+            <a href="#" class="btn text-primary md:border-2 border-primary hover:bg-primary hover:text-white transition ease-in-out duration-500">Log in</a>
+            <a href="#" class="btn text-primary ml-2 md:border-2 border-primary hover:bg-primary hover:text-white transition ease-in-out duration-500">Sign up</a>
+        </div>
+
+        <header>
+            <h2 class="text-gray-900 text-5xl">Recipes</h2>
+            <h3 class="text-gray-900 text-2xl mt-2">For Food Lover</h3>
+        </header>
+
+        <div><!-- cards wrapper -->
+            <h4 class="text-gray-900 text-xl font-semibold mt-6 pb-2 border-dashed border-b-2 border-red-200">Latest Recipes</h4>
+
+            <div class="mt-8 grid lg:grid-cols-3 gap-8">
+                <!-- single card goes here -->
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img1.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">RecipeTin Eats</span>
+                        <span class="block text-sm text-gray-500">A Food Blog Serving Up Quick & Easy Dinner Recipes.</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 20 mins</span>
+                    </div>
+                </div>
+
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img2.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 25 mins</span>
+                    </div>
+
+                </div>
+
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images//img3.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 30 mins</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-8 grid lg:grid-cols-3 gap-8">
+                <!-- single card goes here -->
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images//img1.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 20 mins</span>
+                    </div>
+                </div>
+
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img2.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold"></span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 25 mins</span>
+                    </div>
+
+                </div>
+
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img3.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 30 mins</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h4 class="text-gray-900 text-xl font-semibold mt-6 pb-2 border-dashed border-b-2 border-red-200">Popular Recipes</h4>
+
+            <div class="mt-8 grid lg:grid-cols-3 gap-8">
+                <!-- single card goes here -->
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img1.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 20 mins</span>
+                    </div>
+                </div>
+
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img2.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 25 mins</span>
+                    </div>
+
+                </div>
+
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img3.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 30 mins</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-8 grid lg:grid-cols-3 gap-8">
+                <!-- single card goes here -->
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img1.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 20 mins</span>
+                    </div>
+                </div>
+
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img2.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 25 mins</span>
+                    </div>
+
+                </div>
+
+                <div class="card hover:shadow-xl">
+                    <img src="assets/images/img3.jpg" alt="" class="w-full h-auto">
+                    <div class="m-4">
+                        <span class="font-bold">Lorem ipsum dolor sit</span>
+                        <span class="block text-sm text-gray-500">Recipe by Atiqur</span>
+                    </div>
+
+                    <div class="badge">
+                        <span><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 30 mins</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div><!--end card wrapper -->
+
+        <div class="flex justify-center mt-6">
+            <div class="btn bg-blue-600 text-white transform hover:scale-110 cursor-pointer transition ease-in-out duration-300">Load more</div>
+        </div>
+
+
+    </main>
+</div> <!-- end wrapper -->
+
+<script src="js/script.js"></script>
 </body>
 </html>
